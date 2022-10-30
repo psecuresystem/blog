@@ -1,0 +1,75 @@
+{
+  "name": "nextjs-static-starter-kit",
+  "version": "1.3.5",
+  "description": "NextJS Boilerplate with static export",
+  "main": "server.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next build && next export",
+    "postexport": "node utils/post-export.js",
+    "type-check": "tsc",
+    "format:write": "prettier \"**/*.{tsx,js,json,md,css}\" --write",
+    "format:test": "prettier \"**/*.{tsx,js,json,md,css}\" --list-different",
+    "lint": "eslint --fix . && echo 'Lint complete.'",
+    "release": "standard-version && git push --follow-tags origin master",
+    "populate:contentful": "contentful space migration --space-id <SPACE_KEY> utils/contentful.js --yes",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate",
+    "contributors:check": "all-contributors check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techhiveIO/nextjs-static-boilerplate.git"
+  },
+  "keywords": [
+    "nextjs",
+    "javascript",
+    "jam",
+    "jam-stack",
+    "boilerplate",
+    "contentful",
+    "netlify",
+    "typescript"
+  ],
+  "author": "Techhive.IO LLC",
+  "license": "CHECK LICENSE UNDER LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/techhiveIO/nextjs-static-boilerplate/issues"
+  },
+  "homepage": "https://github.com/techhiveIO/nextjs-static-boilerplate#readme",
+  "pre-commit": "pretty-quick --staged",
+  "dependencies": {
+    "contentful": "~9.1.4",
+    "dotenv": "~10.0.0",
+    "dotenv-webpack": "^7.0.3",
+    "eslint-plugin-prettier": "~4.0.0",
+    "express": "~4.17.1",
+    "isomorphic-unfetch": "~3.1.0",
+    "next": "~12.0.1",
+    "react": "~17.0.2",
+    "react-dom": "~17.0.2",
+    "react-markdown": "~7.1.0",
+    "sass": "^1.43.4",
+    "serve": "~12.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "~16.11.6",
+    "@types/react": "~17.0.33",
+    "@types/react-dom": "~17.0.10",
+    "@typescript-eslint/eslint-plugin": "~4.22.1",
+    "@typescript-eslint/parser": "~4.22.1",
+    "all-contributors-cli": "^6.20.0",
+    "contentful-cli": "~1.9.30",
+    "contentful-migration": "~4.5.9",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "~8.3.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "~2.4.1",
+    "pretty-quick": "~3.1.1",
+    "standard-version": "~9.3.2",
+    "typescript": "~4.4.4"
+  }
+}
